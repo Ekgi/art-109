@@ -9,11 +9,22 @@
 
 <body>
     <div>
-        <img src="images/ek-render-.png" alt="retired knight on the beach">
+        <img src="images/ek-render-fallback.jpg" alt="retired knight on the beach">
     </div>
     <div>
-        <img src="images/ek-render.png" alt="retired knight on the beach">
+        <img src="images/ek-render-fallback.jpg" alt="retired knight on the beach">
+
     </div>
+    </section>
+    <section>
+        <h2>Responsive images using srcset</h2>
+        <img src="images/ek-render-fallback.jpg" width="1000"
+        alt="retired knight on the beach" srcset="images/ek-render-640.jpg 640w,
+        images/ek-render-1280.jpg 1280w,
+        images/ek-render-1920.jpg 1920w">
+    </section>
+
+
 </body>
 
 </html>
