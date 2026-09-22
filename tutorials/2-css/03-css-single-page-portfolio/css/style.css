@@ -1,4 +1,21 @@
-/* CSS resets */
+/* -----------------------------------Color Palette----------------------------------- */
+
+
+:root {
+    --bg-color-1: #3F3F3D;
+    --bg-color-2: #272727;
+    --font: #FFFEF2;
+    --accent-1: #00FFBF;
+    --accent-2: #cb3441;
+    --accent-3: #85C7F2;
+    --dark:
+}
+
+
+
+
+/* -----------------------------------CSS resets----------------------------------- */
+
 
 * {
     margin: 0;
@@ -12,27 +29,58 @@ html {
 }
 
 
-/* General CSS */
-body {
+html {
+    scroll-behavior: smooth;
 
-    background-color: rgb(255, 255, 255);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 1.2rem;
 }
 
-header {
-    padding: 5.5rem;
-    margin-bottom: 3rem;
-    background-color: rgb(232, 232, 232);
 
-    color: rgb(4, 4, 4);
-    border-bottom: #000 2px solid;
+
+/* -----------------------------------General CSS----------------------------------- */
+body {
+
+    background-color: var(--bg-color-2);
+    color: var(--font);
+    font-family: monospace;
+    font-size: 1.2rem;
+    text-align: justify;
+
+}
+
+
+@media (max-width: 700px) {
+    boody {
+        font-size: 1.3rem;
+    }
+
+}
+
+
+header {
+    padding: 4rem;
+    margin-bottom: 3rem;
+    background-color: var(--bg-color-2);
+
+    color: var(--font);
+    border-bottom: var(--accent-1) 2px solid;
     /* text-align: center; */
 }
 
+@media (max-width: 700px) {
+    header{
+        padding-left: 2rem;
+    }
+}
+
+
 header h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
+    font-family: "Syne Mono", monospace;
+
     right: 2rem;
+    text-decoration: underline;
+    text-decoration-style: double;
+    text-decoration-color: var(--accent-1);
 }
 
 
@@ -40,7 +88,7 @@ nav {
     position: absolute;
     right: 2rem;
     top: 2rem;
- 
+
     /* adding "position: fixed" makes the nav header stick when you scroll */
     /* background-color: white;
     border-radius: 2rem; */
@@ -50,14 +98,44 @@ nav {
 
 nav a {
     text-decoration: none;
-    color: #000;
+    color: var(--font);
     display: inline-block;
     margin: 0 1rem;
+    transition: background-color .5s ease;
 }
 
 
+nav a:hover {
+    background-color: var(--accent-2);
+    transform: scale(1.3);
 
-main {}
+}
+
+
+@media (max-width: 950px) {
+    nav a {
+        margin: 0 .5rem
+    }
+}
+
+
+main {
+    margin: 0;
+
+}
+
+@media (max-width: 950px) {
+    main {
+        margin: 3rem
+    }
+}
+
+
+@media (max-width: 450) {
+    main {
+        margin: 1.5rem
+    }
+}
 
 
 .about-section,
@@ -81,18 +159,30 @@ main {}
 .contact-content h2 {
     margin: 2.5rem 0;
 
+
 }
 
 .portfolio-item {
     margin-bottom: 5rem;
-    background-color: #ffffff;
+    background-color: var(--bg-color-1);
     padding: 3rem;
-    text-align: justify;
     border-radius: 1rem;
-    box-shadow: 0px 8px 6px rgba(107, 107, 107, 0.651);
+    box-shadow: 0px 8px 0px var(--accent-1);
 
 }
 
+@media (max-width: 600px) {
+    .portfolio-item {
+        padding: 2rem
+    }
+}
+
+
+@media (max-width: 600px) {
+    .portfolio-item {
+        padding: 4rem
+    }
+}
 
 .portfolio-item img {
     max-width: 100%;
@@ -112,17 +202,17 @@ main {}
 
 
 .about-section {
-    background-color: #ffffff,
+    /* background-color: #ffffff, */
 }
 
 .portfolio-section {
-    background-color: rgb(237, 237, 237);
+    background-color: var(--bg-color-2);
 
 }
 
 footer {
-    background-color: rgb(57, 57, 57);
-    color: #e3e3e3;
+    background-color: var(--accent-2);
+    /* color: #e3e3e3; */
     padding: 1rem;
     text-align: end;
 }
@@ -130,3 +220,26 @@ footer {
 footer p {
     font-size: 1rem;
 }
+
+
+
+/* STYLE CLASSES */
+
+.accent-1 {
+    color: var(--accent-1);
+}
+
+.accent-2 {
+    color: var(--accent-2);
+}
+
+.accent-3 {
+    color: var(--accent-3);
+}
+
+/* 
+.syne-mono-regular {
+    font-family: "Syne Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+} */
