@@ -1,10 +1,38 @@
+body {
+    animation: change-color 4s infinite alternate;
+}
 
+@keyframes change-color {
+    0% {
+        background-color: khaki;
+    }
 
+    50% {
+        background-color: cornflowerblue;
+    }
 
+    100% {
+        background-color: lightblue;
+    }
+}
 
 .title {
- font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin: 80px auto;
+    animation: skew 3s infinite alternate;
 }
+
+@keyframes skew {
+    0% {
+        transform: skew(0deg, 0deg);
+    }
+
+    100% {
+        transform: skew(60deg, 20deg);
+    }
+}
+
 
 .square {
     background-color: orangered;
@@ -15,13 +43,13 @@
     transition: all 1s;
 }
 
-.square:hover{
-    background-color:aqua;
+.square:hover {
+    background-color: aqua;
     transform: rotate(30deg);
 }
 
 .button-div {
-text-align: center;
+    text-align: center;
 }
 
 .button {
@@ -37,6 +65,66 @@ text-align: center;
 .button:hover {
     background-color: mediumslateblue;
     transform: scale(1.5);
-    color:greenyellow;
+    color: greenyellow;
 }
 
+.loading {
+    color: white;
+    background-color: blue;
+    animation: stretch 5s 4 alternate;
+    width: 80vw;
+
+}
+
+@keyframes stretch {
+    0% {
+        width: 100px;
+    }
+
+    100% {
+        width: 100vw;
+    }
+}
+
+.circle {
+    background-color: darkcyan;
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    margin: 50px auto;
+    transition: all 2s;
+}
+
+.circle:hover {
+    border-radius: 0px;
+    transform: rotate(855deg);
+}
+
+.face {
+    color: blueviolet;
+    text-align: center;
+    font-size: 5rem;
+    animation: wash 2s infinite alternate;
+}
+
+@keyframes wash {
+    0% {
+        color: aqua;
+    }
+
+    25% {
+        color: crimson;
+    }
+
+    50% {
+        color: chartreuse;
+    }
+
+    75% {
+        color: gold
+    }
+
+    100% {
+        color: darkorange;
+    }
+}
