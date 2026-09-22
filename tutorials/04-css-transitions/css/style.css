@@ -1,0 +1,42 @@
+
+
+
+
+.title {
+ font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+}
+
+.square {
+    background-color: orangered;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    margin: 50px auto;
+    transition: all 1s;
+}
+
+.square:hover{
+    background-color:aqua;
+    transform: rotate(30deg);
+}
+
+.button-div {
+text-align: center;
+}
+
+.button {
+    color: white;
+    background-color: olivedrab;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .4s;
+}
+
+.button:hover {
+    background-color: mediumslateblue;
+    transform: scale(1.5);
+    color:greenyellow;
+}
+
