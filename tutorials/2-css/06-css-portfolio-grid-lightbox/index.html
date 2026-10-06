@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethan Kamigaki Portfolio </title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/baguetteBox.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
                 <h1>Ethan Kamigaki</h1>
             </div>
             <div class="nav">
-<button class="hamburger">☰</button>
+                <button class="hamburger">☰</button>
                 <ul class="nav-menu">
                     <li><a href="#about-section">About</a></li>
                     <li><a href="#portfolio-section">Work</a></li>
@@ -41,19 +42,19 @@
                 <h2>My Work</h2>
                 <div class="flex-container-grid">
                     <div class="portfolio-item flex-item-grid">
-                        <img src="images/knight-render.jpg" alt="knight relaxing on a beach">
+                        <a href="images/knight-render.jpg" data-caption="Retired Knight"><img src="images/knight-render.jpg" alt="knight relaxing on a beach"></a>
                         <h3>Work Title</h3>
                         <p>Description of work</p>
                     </div>
                     <div class="portfolio-item flex-item-grid">
-                        <img src="images/object-display.jpg"
-                            alt="stapler, tape dispenser, and a mug filled with pencils">
+                        <a href="images/object-display.jpg" data-caption="Objects"><img src="images/object-display.jpg"
+                            alt="stapler, tape dispenser, and a mug filled with pencils"></a>
                         <h3>Work Title</h3>
                         <p>Description of work</p>
                     </div>
                     <div class="portfolio-item flex-item-grid">
-                        <img src="images/expectations.jpg"
-                            alt="hooded figure approaches hole in cavern wall shaped like a person">
+                        <a href="images/expectations.jpg" data-caption="Expectations"><img src="images/expectations.jpg"
+                            alt="hooded figure approaches hole in cavern wall shaped like a person"></a>
                         <h3>Work Title</h3>
                         <p>Description of work</p>
                     </div>
@@ -106,6 +107,12 @@
         </div>
     </footer>
     <script src="js/hamburger.js"></script>
+    <script src="js/baguetteBox.js"></script>
+<script>
+    baguetteBox.run(".flex-container-grid",{
+        captions: true
+    })
+</script>
 </body>
 
 </html>
