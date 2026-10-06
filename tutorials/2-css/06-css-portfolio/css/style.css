@@ -1,0 +1,272 @@
+/* -----------------------------------Color Palette----------------------------------- */
+
+
+:root {
+    --bg-color-1: #FFFEF2;
+    --bg-color-2: #272727;
+    --font: #3F3F3D;
+    --accent-1: #00FFBF;
+    --accent-2: #cb3441;
+    --accent-3: #85C7F2;
+    --dark:
+}
+
+
+
+
+/* -----------------------------------CSS resets----------------------------------- */
+
+
+
+/* Change box-sizing default to border-box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* respect user font size preferences */
+/* 1 rem is 16px */
+html {
+    font-size: 100%;
+}
+
+
+html {
+    scroll-behavior: smooth;
+
+}
+
+
+/* make images responsive */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* -----------------------------------General CSS----------------------------------- */
+
+
+
+
+body {
+    background-color: var(--bg-color-1);
+    color: var(--font);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: 'Courier New', Courier, monospace;
+    /* text-align: justify; */
+}
+
+
+header {
+    padding: 5rem 2rem;
+    margin-bottom: 7rem;
+}
+
+
+header h1 {
+
+    text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
+}
+
+
+nav a {
+    text-decoration: none;
+    color: var(--font);
+    /* margin: 0rem 1rem; */
+    /* transition: all .5s ease; */
+}
+
+
+nav a:hover {
+    color: var(--accent-2);
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hamburger {
+    display: none;
+    background-color: none;
+    border: none;
+    color: var(--font);
+    font-size: 4rem;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+@media (max-width: 750px) {
+
+    .navbar {
+        /* display: flex;
+        justify-content: space-between; */
+        align-items: flex-start;
+    }
+
+.nav {
+    display: flex;
+    flex-direction: column;
+}
+
+
+    .hamburger {
+        display: block;
+        align-self: flex-end;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--font);
+        color: var(--bg-color-1);
+        padding: 1rem;
+    }
+
+    .nav-menu a {
+        color: var(--bg-color-1)
+    }
+
+
+    header {
+        padding: 1.5rem 2rem;
+    }
+
+}
+
+
+
+
+main {
+    margin: 0%;
+}
+
+@media(max-width:1170px) {
+    main {
+        margin: 2rem;
+    }
+}
+
+@media(max-width:300px) {
+    main {
+        margin: 1rem;
+    }
+}
+
+
+
+
+
+.about-content,
+.portfolio-content,
+.contact-content {
+    max-width: 70rem;
+    margin: 0 auto 7rem auto;
+}
+
+
+.about-content h2,
+.portfolio-content h2,
+.contact-content h2 {
+    margin: 2rem 0rem;
+}
+
+
+.portfolio-item {
+    padding: 1rem;
+    background-color: var(--font);
+    color: var(--bg-color-1);
+    border-radius: 1rem;
+}
+
+
+.portfolio-item p {
+    font-size: 1rem;
+}
+
+.portfolio-item h3 {
+    font-size: 2rem;
+}
+
+
+.portfolio-item img {
+    border-radius: 1rem;
+}
+
+
+footer {
+    padding: 1rem 2rem;
+}
+
+
+footer img {
+    display: inline;
+    max-width: 2.5rem;
+    margin: 0remm 1rem;
+}
+
+@media (max-width: 600px){
+
+    footer p{
+        font-size: 1rem;
+    }
+
+    footer img {
+        max-width: 2rem;
+        margin: 0 .2rem;
+    }
+}
+@media (max-width: 410px){
+
+    footer p{
+        font-size: .8rem;
+    }
+
+    footer img {
+        max-width: 1.3rem;
+        margin: 0 .1rem;
+        
+    }
+}
+
+
+
+/* -----------------------------------Flex Styling----------------------------------- */
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-container-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.flex-item-grid {
+    flex: 1 0 20rem;
+}
