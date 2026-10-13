@@ -73,7 +73,7 @@ header {
 
 
 header h1 {
-
+    font-size: 5.5rem;
     text-shadow: 0 1px 0 #CCCCCC, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, .1), 0 0 5px rgba(0, 0, 0, .1), 0 1px 3px rgba(0, 0, 0, .3), 0 3px 5px rgba(0, 0, 0, .2), 0 5px 10px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .2), 0 20px 20px rgba(0, 0, 0, .15);
 }
 
@@ -120,10 +120,10 @@ nav a:hover {
         align-items: flex-start;
     }
 
-.nav {
-    display: flex;
-    flex-direction: column;
-}
+    .nav {
+        display: flex;
+        flex-direction: column;
+    }
 
 
     .hamburger {
@@ -188,7 +188,7 @@ main {
 .about-content h2,
 .portfolio-content h2,
 .contact-content h2 {
-    margin: 2rem 0rem;
+    margin: 2rem 1rem;
 }
 
 
@@ -202,6 +202,7 @@ main {
 
 .portfolio-item p {
     font-size: 1rem;
+
 }
 
 .portfolio-item h3 {
@@ -211,6 +212,9 @@ main {
 
 .portfolio-item img {
     border-radius: 1rem;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
@@ -225,9 +229,9 @@ footer img {
     margin: 0remm 1rem;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
 
-    footer p{
+    footer p {
         font-size: 1rem;
     }
 
@@ -236,16 +240,17 @@ footer img {
         margin: 0 .2rem;
     }
 }
-@media (max-width: 410px){
 
-    footer p{
+@media (max-width: 410px) {
+
+    footer p {
         font-size: .8rem;
     }
 
     footer img {
         max-width: 1.3rem;
         margin: 0 .1rem;
-        
+
     }
 }
 
